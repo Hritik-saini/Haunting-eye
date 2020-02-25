@@ -163,30 +163,3 @@ class PIDController(object):
                 self._integral = -integral_limit
 
         return u
-
-
-# def _test_system():
-#     """Test PID algorithm."""
-#     import scipy.signal as sig
-#     # transfer function in s-space describes sys
-#     tf = sig.tf2ss([10], [100, 10])
-#     times = np.arange(1, 200, 5.0)
-#     #step = 1 * np.ones(len(times))
-#     # initialize PID
-#     pid = PidController(2.0, 10.0, 0.0)
-#     pid.anti_windup = 0.2
-#     pid.vmin, pid.vmax = -200.0, 200.0
-#     pid.setpoint = 50.0
-#     pid._prev_time = 0.0
-#     sysout = [0.0]
-#     pidout = [0.0]
-#     real_time = [0.0]
-#     for time in times:
-#         real_time.append(time)
-#         pidout.append(pid.compute_output(sysout[-1], real_time[-1]))
-#         t, sysout, xout = sig.lsim(tf, pidout, real_time)
-
-#     fig = plt.figure()
-#     ax = fig.add_subplot(111)
-#     ax.plot(real_time, sysout, 'r', real_time, pidout, 'b--')
-#     plt.show()
