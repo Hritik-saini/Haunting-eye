@@ -1,21 +1,11 @@
-#run program as sudo
-#use time.sleep(0.05) if servo not moving
 import numpy as np
 import cv2
-#import serial
 import Rpi.GPIO as GPIO
 from PID import PIDController
-#ser = serial.Serial('COM10',9600)
-# multiple cascades: https://github.com/Itseez/opencv/tree/master/data/haarcascades
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(11,GPIO.OUT)
 pwm = GPIO.PWM(11,50)
 pwm.start(5)#change so that it becomes 90
-#pwm.ChangeDutyCycle(5 or 7.5 or 10 or custom)
-#pwm.stop()
-#GPIO.cleanup()
-#m=(y2-y1)/180, y-y1=m(x-0)=dutycycle
-#https://github.com/Itseez/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml
 face_cascade = cv2.CascadeClassifier('C:\\Users\\ataata107\\Downloads\\opencv\\build\\etc\\haarcascades\\haarcascade_frontalface_default.xml')
 cap = cv2.VideoCapture(1)
 val=90
