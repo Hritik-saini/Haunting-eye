@@ -1,6 +1,6 @@
-# haunting-eye-2.0
+# Haunting-Eye
 
-PROJECT TITLE : HAUNTING EYE 2.0
+PROJECT TITLE : HAUNTING EYE 
 
 DESCRIPTION:
 
